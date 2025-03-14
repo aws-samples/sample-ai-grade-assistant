@@ -1,0 +1,20 @@
+{
+  "name": "ai-grade-assistant",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "npm run build --workspaces",
+    "deploy": "npm run deploy --workspace=cdk",
+    "start": "npm run start --workspace=ui",
+    "watch": "npm run watch --workspace=cdk",
+    "destroy": "npm run destroy --workspace=cdk",
+    "lint": "npm run lint --workspaces",
+    "lint:fix": "npm run lint:fix --workspaces",
+    "clean": "rm -rf ./node_modules && rm -rf ./lambda/__pycache__* && npm run clean --workspaces",
+    "init": "npm install && npm run deploy"
+  },
+  "workspaces": [
+    "ui",
+    "cdk"
+  ]
+}

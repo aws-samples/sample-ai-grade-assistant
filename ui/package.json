@@ -1,0 +1,56 @@
+{
+  "name": "ai-grade-assistant-ui",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=18.18.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "start": "vite",
+    "build": "vite build",
+    "lint": "eslint . && stylelint \"src/**/*.{css,scss}\"",
+    "lint:fix": "eslint . --fix && stylelint \"src/**/*.{css,scss}\" --fix",
+    "preview": "vite preview",
+    "clean": "rm -rf ./node_modules && rm -rf ./dist && rm -rf ./public/config.js"
+  },
+  "dependencies": {
+    "@aws-amplify/ui-react": "^6.2.0",
+    "@aws-northstar/ui": "^1.1.13",
+    "@cloudscape-design/code-view": "^3.0.24",
+    "@cloudscape-design/components": "^3.0.715",
+    "ace-builds": "^1.35.4",
+    "aws-amplify": "^6.5.1",
+    "moment": "^2.30.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.3.0",
+    "react-markdown": "^9.0.3",
+    "react-query": "^3.39.3",
+    "react-router-dom": "^6.26.1",
+    "recoil": "^0.7.7"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@typescript-eslint/eslint-plugin": "^8.1.0",
+    "@typescript-eslint/parser": "^8.1.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react": "^7.35.0",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.9",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "file-loader": "^6.2.0",
+    "prettier": "^3.3.3",
+    "sass": "^1.77.8",
+    "stylelint": "^16.8.2",
+    "stylelint-config-standard-scss": "^13.1.0",
+    "stylelint-prettier": "^5.0.2",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.1"
+  }
+}

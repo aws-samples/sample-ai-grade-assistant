@@ -1,0 +1,131 @@
+@use '@cloudscape-design/design-tokens/index' as cloudscape;
+
+$primary-color: cloudscape.$color-background-button-primary-default;
+
+.progressbar-wrapper {
+  overflow: hidden;
+  display: block;
+  min-height: 130px;
+}
+
+.progressbar li {
+  list-style-type: none;
+  width: 150px;
+  font-size: 12px;
+  line-height: 16px;
+  position: relative;
+  text-align: center;
+}
+
+.progressbar-label {
+  display: block;
+  margin-top: 8px;
+
+  li.active & {
+    font-weight: bold;
+    color: $primary-color;
+  }
+}
+
+.progressbar-sublabel {
+  display: block;
+  margin-top: 5px;
+  opacity: 0.7;
+}
+
+.progressbar li::before {
+  width: 36px;
+  height: 36px;
+  content: '';
+  line-height: 36px;
+  border: 2px solid cloudscape.$color-border-divider-default;
+  display: block;
+  text-align: center;
+  margin: 0 auto 3px;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+  background-color: cloudscape.$color-background-button-normal-active;
+}
+
+.progressbar li::after {
+  width: 100%;
+  height: 2px;
+  content: '';
+  position: absolute;
+  background-color: cloudscape.$color-border-divider-default;
+  top: 17px;
+  left: -50%;
+  z-index: 0;
+}
+
+.progressbar li:first-child::after {
+  content: none;
+}
+
+.progressbar li.complete {
+  color: #55b776;
+  font-weight: bold;
+}
+
+.progressbar li.complete + li::after {
+  background-color: #55b776;
+}
+
+.progressbar {
+  display: flex;
+  justify-content: center;
+}
+
+.progressbar-spinner {
+  display: none;
+
+  li.active & {
+    left: calc(50% - 5px);
+    top: 15px;
+    z-index: 20;
+    width: 8px;
+    height: 8px;
+    border: 5px solid $primary-color;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    box-sizing: border-box;
+    animation: rotate 0.5s linear infinite;
+
+    &::after {
+      content: '';
+      box-sizing: border-box;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-bottom-color: $primary-color;
+    }
+  }
+}
+
+.progressbar li.complete::before {
+  border-color: #55b776;
+  background: green;
+  font-weight: 900;
+  font-size: 1em;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.3333 4L6 11.3333L2.66667 8' stroke='%23dbffdb' stroke-width='2.66667' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 20px 20px;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,34 @@
+@use '@cloudscape-design/design-tokens/index' as cloudscape;
+
+body {
+  background-color: #0f1b2a;
+}
+
+// top navigation header
+#app-header {
+  position: sticky;
+  top: 0;
+  z-index: 1002;
+  margin-bottom: -1px;
+  box-shadow: 0 1px 0 0 cloudscape.$color-border-divider-default;
+}
+
+// remove underline from breadcrumb links
+nav > ol > li a {
+  text-decoration: none !important;
+}
+
+// hide title in nav menu
+nav h2 {
+  display: none;
+}
+
+// add left spacing to nav sections
+nav ul > li > div {
+  padding-left: 20px;
+}
+
+// shift top nav dropdowns up slightly
+.awsui-context-top-navigation > div {
+  margin-top: -10px;
+}

@@ -1,0 +1,39 @@
+// Update styles for Amplify login screen to be similar to Northstar theme
+:root,
+[data-amplify-theme] {
+  --amplify-components-button-primary-background-color: #539fe5;
+  --amplify-components-button-primary-hover-background-color: #89bdee;
+  --amplify-components-button-primary-active-background-color: #75a8d9;
+  --amplify-components-button-link-color: #539fe5;
+  --amplify-components-tabs-item-active-color: #539fe5;
+  --amplify-components-tabs-item-active-border-color: #539fe5;
+  --amplify-components-tabs-item-focus-color: #539fe5;
+  --amplify-components-tabs-item-background-color: #f5f5f5;
+  --amplify-components-fieldcontrol-border-radius: 20px;
+  --amplify-components-authenticator-modal-background-color: #101b2a;
+  --amplify-components-fieldcontrol-font-size: 14px;
+  --amplify-components-button-font-size: 16px;
+  --amplify-colors-font-hover: #2d6da9;
+  --amplify-colors-primary-90: #2d6da9;
+}
+
+[data-amplify-router] {
+  border-radius: var(--amplify-components-fieldcontrol-border-radius);
+}
+
+.amplify-tabs [role='tablist'] {
+  border-radius: var(--amplify-components-fieldcontrol-border-radius)
+    var(--amplify-components-fieldcontrol-border-radius) 0 0;
+
+  > button:first-child {
+    border-radius: var(--amplify-components-fieldcontrol-border-radius) 0 0;
+  }
+
+  > button:last-child {
+    border-radius: 0 var(--amplify-components-fieldcontrol-border-radius) 0 0;
+  }
+}
+
+.amplify-label {
+  font-size: 14px;
+}

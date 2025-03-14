@@ -1,0 +1,74 @@
+@use '@cloudscape-design/design-tokens/index' as cloudscape;
+
+// Utility classes
+
+.text-link {
+  a {
+    font-weight: 500 !important;
+    -webkit-font-smoothing: auto !important;
+
+    &:hover {
+      text-decoration: underline !important;
+    }
+  }
+}
+
+.border {
+  border: 1px solid cloudscape.$color-border-divider-default;
+}
+
+[data-select] {
+  min-width: 300px;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.attachment-icon {
+  font-size: 36px;
+}
+
+.scroller {
+  max-height: 200px;
+  overflow-y: scroll;
+}
+
+pre.feedback {
+  font-family: inherit;
+  white-space: break-spaces;
+}
+
+[data-helper-text] {
+  color: cloudscape.$color-text-form-secondary !important;
+  font-size: cloudscape.$font-size-body-s !important;
+  line-height: cloudscape.$line-height-body-s !important;
+
+  > ul {
+    padding-left: 20px;
+
+    > li {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+[data-tab-form] {
+  margin-top: -15px;
+}
+
+.profile-image {
+  height: auto;
+  width: calc(100% + 20px);
+  margin: 0 -40px -20px;
+}
+
+[data-markdown] {
+  > *:first-child {
+    margin-top: 0;
+  }
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}
