@@ -52,6 +52,16 @@ To run the UI locally:
 
 To remove the project from AWS, use ```npm run destroy```.
 
+## Screenshots
+
+### Submission page
+![Submissions page](./docs/images/submissions.png)
+
+![Grading in progress](./docs/images/grading.png)
+
+![Good submission](./docs/images/good_submission.png)
+
+![LLM settings](./docs/images/LLM_settings.png)
 
 ## License Summary
 
